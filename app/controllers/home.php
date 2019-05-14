@@ -1,0 +1,12 @@
+<?php
+
+class Home extends Controller{
+    public function index()
+    {
+        $data['judul'] = 'iVote By KAnggara';
+        $data['calon'] = $this->model('Calon_model')->getAllCalon();
+        $this->view('templates/header', $data);        
+        $this->view('home/index', $data);
+        $this->view('templates/footer');
+    }
+}
