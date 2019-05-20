@@ -37,7 +37,7 @@
     <br><br><br>
     <div class="alert alert-danger" role="alert" align="center">
         <marquee direction="left">
-        Out Of There!!!
+        Out Of There!!
         </marquee>
     </div>
 
