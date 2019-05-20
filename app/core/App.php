@@ -7,6 +7,12 @@ class App {
 
     public function __construct()
     {
+        if (isset($_POST['submit']))
+        {
+            $id = $_POST['submit'];
+            echo $id;
+        }
+
         $url = $this->parseURL();
 
         //controller
