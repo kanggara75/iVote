@@ -20,8 +20,7 @@
 </div>
 
 
-<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="judulModal"
-    aria-hidden="true">
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="judulModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -32,23 +31,25 @@
             </div>
             <div class="modal-body">
 
-            <form action="<?= BASEURL; ?>pemilih/tambah" method="post">
-            <div class="form-group">
-    <label for="nama">Nama Lengkap</label>
-    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
-  </div>
+                <form action="<?= BASEURL; ?>pemilih/tambah" method="post">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
+                    </div>
 
-  <div class="form-group">
-    <label for="nim">NIM</label>
-    <input type="number" class="form-control" id="nim" name="nim" placeholder="Nomor Induk Mahasiswa">
-  </div>
+                    <div class="form-group">
+                        <label for="nim">NIM</label>
+                        <input type="number" class="form-control" id="nim" name="nim"
+                            placeholder="Nomor Induk Mahasiswa">
+                    </div>
 
-  <div class="form-group">
-    <label for="status">Status</label>
-    <input type="number" class="form-control" id="status" name="status" placeholder="Status Pemilih">
-  </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <input type="number" class="form-control" id="status" name="status"
+                            placeholder="Status Pemilih">
+                    </div>
 
-            
+
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
