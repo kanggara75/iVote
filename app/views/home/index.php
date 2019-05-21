@@ -1,3 +1,11 @@
+<?php
+if (isset($_POST['submit']))
+        {
+            $id = $_POST['submit'];
+            // mysqli_query($dsn, "UPDATE iVote SET value=value+1 WHERE id = $id");    
+            echo $id;
+        }
+?>
 <div class="container">
     <div class="jumbotron mt-5">
         <h1 class="display-4" align="center">Pemilihan Presiden Waka-Waka land</h1>
