@@ -17,12 +17,12 @@
     <table align=center>
         <form>
             <tr>
-                <td>Nama</td>
+                <td>Nama Ketua</td>
                 <td>:</td>
                 <td><input type="text" name="nama" id="nama"></td>
             </tr>
             <tr>
-                <td>Nama</td>
+                <td>Nama Wakil</td>
                 <td>:</td>
                 <td><input type="text" name="nama" id="nama"></td>
             </tr>
