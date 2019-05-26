@@ -38,12 +38,12 @@ if (isset($_POST['submit']))
     <div class="alert alert-warning" role="alert" align="left">
         <p>Hasil:</p>
         <table width=500 border=5>
-        
+
             <tr>
                 <?php foreach( $data['calon'] as $calon) : ?>
                 <td>
                     <div class="progress-bar" role="progressbar" style="width: <?= $calon['hasil'] ?>%;"
-                        aria-valuenow="<?= $calon['hasil']; ?>" aria-valuemin="0" aria-valuemax="100"><?= $calon['hasil']; ?></div>
+                        aria-valuenow="<?= $calon['hasil']; ?>" aria-valuemin="0" aria-valuemax="100"><?= $calon['hasil']; ?>%</div>
                 </td>
             </tr>
             <tr>
