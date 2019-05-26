@@ -1,9 +1,9 @@
 iVote => Tugas Besar Pemrograman Web 2019 Teknik Elektro Uin Suska Riau
 
 
-Login => Bg Fahzur
+<!-- Login => Bg Fahzur
 Daftar => Yudha
-<!-- 
+
 Halaman Login -> Admin -> Pemilih | Paslon
 
 Pemilih -> Tambah Pemilih
@@ -19,5 +19,4 @@ Paslon  -> Tambah Paslon
 Hasil   -> Vertikal Graph
         -> Verivkasi NIM
 
-Pemilihan -> Veerivikasi Nim -> Tampilkan Hasil
- -->
+Pemilihan -> Veerivikasi Nim -> Tampilkan Hasil -->
