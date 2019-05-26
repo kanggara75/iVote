@@ -3,21 +3,21 @@
 class Admin extends Controller{
     public function index()
     {
-        $data['judul'] = 'iVote Admin Page';
+        $data['judul'] = 'iVote Admin Login Page';
         $data['status'] = 'Admin';
         $data['nama'] = $this->model('User_model')->getUser();
-        // $this->view('templates/header', $data);        
+        $this->view('templates/header', $data);        
         $this->view('admin/index', $data);
         // $this->view('templates/footer');
     }
 
-    public function regis()
+    public function register()
     {
-        // $data['judul'] = 'Detail Pemilih';
+        $data['judul'] = 'Daftar Pasangan Calon';
         // $data['pemilih'] = $this->model('Pemilih_model')->getPemilihByNo($no);
         // $this->view('templates/header', $data);        
         $this->view('admin/register', $data);
-        // $this->view('templates/footer');
+        $this->view('templates/footer');
     }
 
     public function pemilih()
@@ -29,12 +29,12 @@ class Admin extends Controller{
         // $this->view('templates/footer');
     }
 
-    public function admin()
+    public function root()
     {
         $data['judul'] = 'Administrator Page';
         // $data['admin'] = $this->model('Pemilih_model')->getPemilihByNo($no);
         $this->view('templates/header', $data);        
-        $this->view('admin/pemilih', $data);
-        // $this->view('templates/footer');
+        $this->view('admin/root', $data);
+        $this->view('templates/footer');
     }
 }

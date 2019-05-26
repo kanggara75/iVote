@@ -1,4 +1,5 @@
 <div class="container-fluid">
+<div class="row justify-content-center">
     <div class="alert alert-danger" role="alert" align="lefl">
         <strong>Disclaimer</strong><br>
         1. Adi Gunawan <br>
@@ -11,6 +12,7 @@
         terstruktur
         Pemrograman Web 2019.
     </div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -21,7 +23,10 @@
 <script src="<?= BASEURL; ?>js/jam.js"></script>
 <script src="<?= BASEURL; ?>js/Chart.js"></script>
 <script src="<?= BASEURL; ?>js/status.js"></script>
-
+<script src="<?= BASEURL; ?>js/jquery.min.js"></script>
+<script src="<?= BASEURL; ?>js/bootstrap.bundle.min.js"></script>
+<script src="<?= BASEURL; ?>js/jquery.easing.min.js"></script>
+<script src="<?= BASEURL; ?>js/sb-admin-2.min.js"></script>
 </body>
 
 </html>
