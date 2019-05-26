@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?= BASEURL; ?>css/w3.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>css/cd.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>css/ini.css">
+    <link rel="stylesheet" type="text/css" href="<?= BASEURL; ?>css/Chart.css">
     <link rel="icon" type="image/png" href="<?= BASEURL?>img/icon.png">
     <style>
         p {

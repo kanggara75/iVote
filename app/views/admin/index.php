@@ -1,165 +1,92 @@
-<div class="login-container login-v2">
-    <script type="text/javascript">
-        var a = Math.ceil(Math.random() * 10);
-        var b = Math.ceil(Math.random() * 10);
-        var c = a + b
+<!DOCTYPE html>
+<html lang="id">
+<!-- Versi 0.1 beta Copyleft © KAnggara75 -->
 
-        function DrawBotBoot() {
-            document.write("<h2 style='color:#fff;font-size:19px; margin-top:10px;'>Berapa jumlah " + a + " + " + b +
-                " ? </h2>");
-            document.write(
-                "<input id='BotBootInput' type='text' maxlength='2' size='2' class='form-control' placeholder='Masukkan jawaban anda!' autocomplete='off'/>"
-            );
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <?= $data['judul']; ?>
+    </title>
+    <link rel="stylesheet" href="<?= BASEURL; ?>css/bootstrap.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>css/custom.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="icon" type="image/png" href="<?= BASEURL?>img/icon.png">
+    <style>
+        p {
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0px;
         }
+    </style>
+</head>
 
-        function ValidBotBoot() {
-            var d = document.getElementById('BotBootInput').value;
-            if (d == c) return document.getElementById('login-form').submit();;
-            return alert('Coba lagi');
+<body background="<?= BASEURL; ?>img/bgadmin.jpg">
+    <div class="container">
+        <div class="row text-center ">
+            <div class="col-md-12">
+                <form action="login.php" method="POST">
+                    <br /><br />
+                    <br><br><br><br>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h2 align="center"><strong>iVote</strong></h2>
+                        <h4 align="center"><b>Silahkan Log In</b></h4>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" method="POST"><br>
 
-        }
-    </script>
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input class="form-control" name="username" placeholder="Username" required="" />
 
-    <div class="" style="margin-top:-5%;">
-        <form id="login-form" action="/" method="post">
-            <div class="login-box animated fadeInDown">
-                <div class="login-body">
-                    <div style="margin: 0 auto; ">
-                        <center><img width="80px" alt="iraise uin suska" src="/images/logo.png" style="margin: 0 auto;vertical-align:middle;"></center>
-                    </div>
-                    <div style="clear:both" />
-                    <div class="login-title" style="margin:10px;font-size:21px !important;">
-                        <strong>iRaise</strong>
-                    </div>
-                    <div class="login-title" style="margin:10px;">
-                        <strong>Integrated Academic Information System</strong>
-                    </div>
-                    <div class="login-title">Assalamualaikum, Login Please</div>
-                    <form action="index.html" class="form-horizontal" method="post">
-                        <div class="form-group">
-                            <div class="col-md-12">
-                                <div class="input-group">
-                                    <div style="color:white;">
-                                        <div id="login-form_es_" class="errorSummary" style="display:none">
-                                            <ul>
-                                                <li>dummy</li>
-                                            </ul>
+                                <br>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" name="password" placeholder="Password"
+                                        required="" />
+                                    <br>
+
+
+
+                                    <div align="center"><input type="Submit" name="Login" value="Login"
+                                            class="btn btn-success">
+
+                                        <div align="center">
+
+
+                                            <br><br><b>Belum Daftar? <a href="daftar.php">Klik Disini</a></p>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12">
-                                <div class="input-group" style="margin-bottom:2px;">
-                                    <div class="input-group-addon">
-                                        <span class="fa fa-user"></span>
-                                    </div>
-                                    <input class="form-control" placeholder="User ID Anda" autocomplete="off" autofocus="autofocus"
-                                        name="LoginForm[username]" id="LoginForm_username" type="text" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12">
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <span class="fa fa-lock"></span>
-                                    </div>
-                                    <input class="form-control" placeholder="Password Anda" name="LoginForm[password]"
-                                        id="LoginForm_password" type="password" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12">
-                                <div class="login-title">
-                                    <script type="text/javascript">
-                                        DrawBotBoot()
-                                    </script>
-                                </div>
-                                <h4>
-                                </h4>
-                                <input id="Button1" type="button" value="Login" onclick="(ValidBotBoot());" class="btn btn-primary btn-lg btn-block" />
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-md-12" style="margin-top:10px;">
-                            </div>
-                        </div>
-                        <br />
-                        <div class="form-group">
-                            <div class="col-md-12">
 
-                                <a class="forgot" href="/site/forgot" class="forgot">Lupa Password ?</a>
-
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-                <div class="login-footer">
-                    <div class="pull-left">
-                        &copy; 2015 Integrated Academic Information System </div>
+                        </form>
+                    </div>
 
                 </div>
+                </from>
             </div>
 
 
-        </form>
-    </div><!-- form -->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        </div>
+    </div>
 
-        ga('create', 'UA-65031993-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-</div>
-<!-- START SCRIPTS -->
-<!-- START PLUGINS -->
-<!-- END TEMPLATE -->
 
-<script>
-    $(function () {
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
 
-        pageLoadingFrame("show", "v1");
-        setTimeout(function () {
-            pageLoadingFrame("hide");
-        }, 2000);
+</body>
 
-        $("#loader_v1").on("click", function () {
-            pageLoadingFrame("show", "v1");
-            setTimeout(function () {
-                pageLoadingFrame("hide");
-            }, 2000);
-        });
-
-        $("#loader_v2").on("click", function () {
-            pageLoadingFrame("show");
-            setTimeout(function () {
-                pageLoadingFrame("hide");
-            }, 2000);
-        });
-
-    });
-</script>
-<!-- END SCRIPTS -->
-<script type="text/javascript">
-    /*<![CDATA[*/
-    jQuery(function ($) {
-        jQuery('[data-toggle=popover]').popover();
-        jQuery('[data-toggle=tooltip]').tooltip();
-    });
-    /*]]>*/
-</script>
+</html>
+<!--  -->
