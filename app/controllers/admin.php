@@ -4,9 +4,9 @@ class Admin extends Controller{
     public function index()
     {
         $data['judul'] = 'iVote Admin Login Page';
-        $data['status'] = 'Admin';
-        $data['nama'] = $this->model('User_model')->getUser();
-        $this->view('templates/header', $data);        
+        // $data['status'] = 'Admin';
+        // $data['nama'] = $this->model('User_model')->getUser();
+        // $this->view('templates/hadmin', $data);        
         $this->view('admin/index', $data);
         // $this->view('templates/footer');
     }
@@ -23,18 +23,27 @@ class Admin extends Controller{
     public function pemilih()
     {
         $data['judul'] = 'Detail Pemilih';
+        $data['pemilih'] = $this->model('Pemilih_model')->getAllPemilih();
         // $data['pemilih'] = $this->model('Pemilih_model')->getPemilihByNo($no);
-        // $this->view('templates/header', $data);        
         $this->view('admin/pemilih', $data);
-        // $this->view('templates/footer');
+        $this->view('templates/footer');
     }
 
     public function root()
     {
         $data['judul'] = 'Administrator Page';
         // $data['admin'] = $this->model('Pemilih_model')->getPemilihByNo($no);
-        $this->view('templates/header', $data);        
+        // $this->view('templates/header', $data);        
         $this->view('admin/root', $data);
+        // $this->view('templates/footer');
+    }
+
+    public function notfound()
+    {
+        $data['judul'] = 'Page not found';
+        // $data['admin'] = $this->model('Pemilih_model')->getPemilihByNo($no);
+        $this->view('templates/hadmin', $data);        
+        $this->view('admin/404', $data);
         $this->view('templates/footer');
     }
 }

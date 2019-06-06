@@ -43,7 +43,7 @@
 </head>
 
 <body background="<?= BASEURL; ?>img/bgadmin.jpg" align="center">
-    <div class="container">
+    <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-5">
                 <div class="card o-hidden border-0 shadow-lg my-5">
@@ -87,50 +87,13 @@
                                     </div>
                                     <div class="login-footer">
                                         <div class="pull-left">
-                                        <span class="copyleft">&copy;</span> 2019 Voting System </div>
+                                        <span class="copyleft">&copy;</span>2019 Intregrated Voting System </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="text-center ">
-        <div class="col-md-12">
-            <form action="login.php" method="GET">
-                <br><br><br><br>
-        </div>
-    </div>
-    <!-- <table border=5 width=400>
-            <tr>
-                <td> -->
-    <div class="col-lg-7">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h2 align="center"><strong>iVote</strong></h2>
-                <h4 align="center"><b>Silahkan Log In</b></h4>
-            </div>
-            <div class="panel-body">
-                <form role="form" method="POST"><br>
-                    <div class="form-group">
-                        <label>Username</label>
-                        <input class="form-control" name="username" placeholder="Username" required="" />
-                        <br>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control" name="password" placeholder="Password"
-                                required="" />
-                            <br>
-                            <div align="center"><input type="Submit" name="Login" value="Login" class="btn btn-success">
-                                <div align="center">
-                                    <br><br><b>Belum Daftar? <a href="daftar.php">Klik Disini</a></p>
-                                </div>
-                            </div>
-                        </div>
-                </form>
             </div>
         </div>
     </div>
