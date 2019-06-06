@@ -35,15 +35,17 @@ if (isset($_POST['submit']))
             </table>
         </form>
     </div>
-    <div class="alert alert-warning" role="alert" align="left">
-        <p>Hasil:</p>
-        <table width=500 border=5>
 
+    <div class="section section-hasil alert alert-warning justify-content-center" role="alert" align="center"
+        id="hasil">
+        <p>Hasil:</p>
+        <table width="95%" border=5 class="justify-content-center">
             <tr>
                 <?php foreach( $data['calon'] as $calon) : ?>
                 <td>
                     <div class="progress-bar" role="progressbar" style="width: <?= $calon['hasil'] ?>%;"
-                        aria-valuenow="<?= $calon['hasil']; ?>" aria-valuemin="0" aria-valuemax="100"><?= $calon['hasil']; ?>%</div>
+                        aria-valuenow="<?= $calon['hasil']; ?>" aria-valuemin="0" aria-valuemax="100">
+                        <?= $calon['hasil']; ?>%</div>
                 </td>
             </tr>
             <tr>
