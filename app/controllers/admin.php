@@ -1,6 +1,7 @@
 <?php
 
-class Admin extends Controller{
+class Admin extends Controller
+{
     public function index()
     {
         $data['judul'] = 'iVote Admin Login Page';
@@ -42,8 +43,16 @@ class Admin extends Controller{
     {
         $data['judul'] = 'Page not found';
         // $data['admin'] = $this->model('Pemilih_model')->getPemilihByNo($no);
-        $this->view('templates/hadmin', $data);        
+        $this->view('templates/hadmin', $data);
         $this->view('admin/404', $data);
         $this->view('templates/footer');
+    }
+
+    public function tambah()
+    {
+        if ($this->model('Pemilih_Model')->tambahDataPemilih($_POST) > 0) {
+            header('Location: ' . BASEURL . 'admin/pemilih');
+            exit;
+        }
     }
 }
