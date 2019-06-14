@@ -1,5 +1,5 @@
-<div class="container mt-5 align-content-center">
-    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+<div class="container mt-5 row justify-content-center">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
         <div class="card-header"><?= $data['judul']; ?></div>
         <div class="card-body">
             <table>
@@ -29,8 +29,8 @@
                     </h5>
                 </tr>
             </table>
-            <br>    
-            <button type="button" class="btn btn-warning"><a href="<?= BASEURL;?>pemilih" class="Button">Kembali</a></button>
+            <br>
+            <button type="button" class="btn btn-warning"><a href="<?= BASEURL; ?>admin/pemilih" class="Button">Kembali</a></button>
         </div>
     </div>
 </div>
