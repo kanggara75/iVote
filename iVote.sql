@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 22, 2019 at 06:34 PM
+-- Generation Time: Jun 14, 2019 at 03:20 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -45,30 +45,6 @@ INSERT INTO `admin` (`id`, `username`, `pass`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hasil`
---
-
-CREATE TABLE `hasil` (
-  `no` int(3) NOT NULL,
-  `ketua` varchar(20) NOT NULL,
-  `wakil` varchar(20) NOT NULL,
-  `visi` varchar(120) NOT NULL,
-  `misi` varchar(120) NOT NULL,
-  `foto_ketua` text NOT NULL,
-  `foto_wakil` text NOT NULL,
-  `hasil` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `hasil`
---
-
-INSERT INTO `hasil` (`no`, `ketua`, `wakil`, `visi`, `misi`, `foto_ketua`, `foto_wakil`, `hasil`) VALUES
-(1, '', '', '', '', '', '', 0);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `paslon`
 --
 
@@ -76,6 +52,7 @@ CREATE TABLE `paslon` (
   `no` int(3) NOT NULL,
   `ketua` varchar(20) NOT NULL,
   `wakil` varchar(20) NOT NULL,
+  `hasil` int(4) NOT NULL,
   `foto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -83,9 +60,9 @@ CREATE TABLE `paslon` (
 -- Dumping data for table `paslon`
 --
 
-INSERT INTO `paslon` (`no`, `ketua`, `wakil`, `foto`) VALUES
-(1, 'Ter', 'JAmin', 'img/1.png'),
-(2, 'PS', 'andi', 'img/2.png');
+INSERT INTO `paslon` (`no`, `ketua`, `wakil`, `hasil`, `foto`) VALUES
+(1, 'Ter', 'JAmin', 20, 'img/1.png'),
+(2, 'PS', 'andi', 30, 'img/2.png');
 
 -- --------------------------------------------------------
 
@@ -399,12 +376,6 @@ ALTER TABLE `admin`
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indexes for table `hasil`
---
-ALTER TABLE `hasil`
-  ADD PRIMARY KEY (`no`);
-
---
 -- Indexes for table `paslon`
 --
 ALTER TABLE `paslon`
@@ -425,12 +396,6 @@ ALTER TABLE `pemilih`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `hasil`
---
-ALTER TABLE `hasil`
-  MODIFY `no` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `paslon`
