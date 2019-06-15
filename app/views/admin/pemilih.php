@@ -71,16 +71,16 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <label class="modal-body">
+                <div class="modal-body">
                     <form action="<?= BASEURL; ?>admin/tambah" method="post">
                         <div class="form-group">
                             <label for="nama">Nama Lengkap</label>
                             <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
                         </div>
-                        <label class="form-group">
+                        <div class="form-group">
                             <label for="nim">NIM</label>
                             <input type="number" class="form-control" id="nim" name="nim" placeholder="Nomor Induk Mahasiswa">
-                        </label>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
