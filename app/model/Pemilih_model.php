@@ -34,4 +34,15 @@ class Pemilih_model
 
         return $this->db->rowCount();
     }
+
+    public function hapusDataPemilih($id)
+    {
+        $query = "DELETE FROM pemilih WHERE no = :id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
 }

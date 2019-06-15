@@ -60,4 +60,16 @@ class Admin extends Controller
             exit;
         }
     }
+    public function hapus($id)
+    {
+        if ($this->model('Pemilih_model')->hapusDataPemilih($id) > 0) {
+            Notifer::setNotif('berhasil', 'dihapus', 'success');
+            header('Location: ' . BASEURL . 'admin/pemilih');
+            exit;
+        } else{
+            Notifer::setNotif('gagal', 'dihapus', 'danger');
+            header('Location: ' . BASEURL . 'admin/pemilih');
+            exit;
+        }
+    }
 }
