@@ -35,14 +35,14 @@ class Pemilih_model
         return $this->db->rowCount();
     }
 
-    public function ubahDataPemilih($data)
+    public function hapusDataPemilih($id)
     {
-        $query = "UPDATE pemilih SET nama = :nama, nim = :nim, WHERE no = :no";
+        $query = "DELETE FROM pemilih WHERE no = :id";
         $this->db->query($query);
-        $this->db->bind('nama', $data['nama']);
-        $this->db->bind('nim', $data['nim']);
-        $this->db->bind('no', $data['id']);
+        $this->db->bind('id', $id);
+
         $this->db->execute();
+        
         return $this->db->rowCount();
     }
 }
