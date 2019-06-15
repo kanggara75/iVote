@@ -42,6 +42,11 @@
 
     <div class="container-fluid">
         <div class="row justify-content-center">
+            <div class="col-lg-6">
+            <h6 align="center"><?php Notifer::notif();?></h6>
+            </div>
+        </div>
+        <div class="row justify-content-center">
             <div class="col-6">
                 <br>
                 <h1 align="center">Daftar Pemilih</h1>
@@ -75,10 +80,6 @@
                         <div class="form-group">
                             <label for="nim">NIM</label>
                             <input type="number" class="form-control" id="nim" name="nim" placeholder="Nomor Induk Mahasiswa">
-                        </div>
-                        <div class="form-group">
-                            <label for="status">Status</label>
-                            <input type="number" class="form-control" id="status" name="status" placeholder="0">
                         </div>
                 </div>
                 <div class="modal-footer">

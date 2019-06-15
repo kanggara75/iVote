@@ -29,7 +29,6 @@ class Pemilih_model
         $this->db->query($query);
         $this->db->bind('nama', $data['nama']);
         $this->db->bind('nim', $data['nim']);
-        // $this->db->bind('status', $data['status']);
 
         $this->db->execute();
 

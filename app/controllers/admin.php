@@ -50,7 +50,12 @@ class Admin extends Controller
 
     public function tambah()
     {
-        if ($this->model('Pemilih_Model')->tambahDataPemilih($_POST) > 0) {
+        if ($this->model('Pemilih_model')->tambahDataPemilih($_POST) > 0) {
+            Notifer::setNotif('berhasil', 'ditambahkan', 'success');
+            header('Location: ' . BASEURL . 'admin/pemilih');
+            exit;
+        } else{
+            Notifer::setNotif('gagal', 'ditambahkan', 'danger');
             header('Location: ' . BASEURL . 'admin/pemilih');
             exit;
         }
