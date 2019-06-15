@@ -60,4 +60,21 @@ class Admin extends Controller
             exit;
         }
     }
+
+    public function getubah(){
+        echo json_encode($this->model('Pemilih_model')->getPemilihByNo($_POST['id']));
+    }
+
+    public function ubah()
+    {
+        if ($this->model('Pemilih_model')->ubahDataPemilih($_POST) > 0) {
+            Notifer::setNotif('berhasil', 'diubah', 'success');
+            header('Location: ' . BASEURL . 'admin/pemilih');
+            exit;
+        } else{
+            Notifer::setNotif('gagal', 'diubah', 'danger');
+            header('Location: ' . BASEURL . 'admin/pemilih');
+            exit;
+        }
+    }
 }

@@ -30,7 +30,7 @@
                 <div class="header-right navbar-nav">
                     <ul class="nav list-unstyled">
                         <div class="navbar-nav">
-                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#formModal">
+                            <button type="button" class="btn btn-warning tombolTambahData" data-toggle="modal" data-target="#formModal">
                                 Tambah Data Pemilih
                             </button>
                         </div>
@@ -52,9 +52,10 @@
                 <h1 align="center">Daftar Pemilih</h1>
                 <ul class="list-group">
                     <?php foreach ($data['pemilih'] as $pemilih) : ?>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <li class="list-group-item">
                             <?= $pemilih['no']; ?>. <?= $pemilih['nama']; ?>
-                            <a href="<?= BASEURL; ?>pemilih/detail/<?= $pemilih['no']; ?>" class="badge badge-primary">Detail</a>
+                            <a href="<?= BASEURL; ?>pemilih/detail/<?= $pemilih['no']; ?>" class="badge badge-primary float-right ml-1">Detail</a>
+                            <a href="<?= BASEURL; ?>/admin/ubah/<?= $pemilih['no']; ?>" class="badge badge-success float-right ml-1 modalUbah" data-toggle="modal" data-target="#formModal" data-id="<?=$pemilih['no'];?>">Ubah</a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -73,6 +74,7 @@
                 </div>
                 <label class="modal-body">
                     <form action="<?= BASEURL; ?>admin/tambah" method="post">
+                    <input type="hidden" name="id" id="id">
                         <div class="form-group">
                             <label for="nama">Nama Lengkap</label>
                             <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">

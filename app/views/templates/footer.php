@@ -21,6 +21,7 @@
 <!-- <script src="<?= BASEURL; ?>js/jam.js"></script> -->
 <script src="<?= BASEURL; ?>js/Chart.js"></script>
 <script src="<?= BASEURL; ?>js/status.js"></script>
+<script src="<?= BASEURL; ?>js/script.js"></script>
 <script src="<?= BASEURL; ?>js/jquery.min.js"></script>
 <script src="<?= BASEURL; ?>js/bootstrap.bundle.min.js"></script>
 <script src="<?= BASEURL; ?>js/jquery.easing.min.js"></script>
