@@ -23,10 +23,19 @@ class Admin extends Controller
 
     public function pemilih()
     {
-        $data['judul'] = 'Detail Pemilih';
+        $data['judul'] = 'Daftar Pemilih';
         $data['pemilih'] = $this->model('Pemilih_model')->getAllPemilih();
         // $data['pemilih'] = $this->model('Pemilih_model')->getPemilihByNo($no);
         $this->view('admin/pemilih', $data);
+        $this->view('templates/footer');
+    }
+
+    public function paslon()
+    {
+        $data['judul'] = 'List Pasangan Calon';
+        $data['paslon'] = $this->model('Calon_model')->getAllCalon();
+        // $data['pemilih'] = $this->model('Pemilih_model')->getPemilihByNo($no);
+        $this->view('admin/paslon', $data);
         $this->view('templates/footer');
     }
 

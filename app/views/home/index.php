@@ -39,6 +39,7 @@ if (isset($_POST['submit']))
     <div class="section section-hasil alert alert-warning justify-content-center" role="alert" align="center"
         id="hasil">
         <p>Hasil:</p>
+        <!-- <div id="poll_result"></div> -->
         <table width="95%" border=5 class="justify-content-center">
             <tr>
                 <?php foreach( $data['calon'] as $calon) : ?>
