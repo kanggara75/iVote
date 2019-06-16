@@ -6,17 +6,17 @@ Daftar => Yudha
 
 Halaman Login -> Admin -> Pemilih | Paslon
 
-Pemilih -> Tambah Pemilih
-        -> Tampilkan Pemilih
-        -> Hapus
-        -> Edit
+Pemilih -> Tambah Pemilih //Selesai
+        -> Tampilkan Pemilih //Selesai
+        -> Hapus //Selesai
+        -> Edit 
 
-Paslon  -> Tambah Paslon
-        -> Hapus Paslon
-        -> Lihat Paslon
-        -> Edit Paslon
+Paslon  -> Tambah Paslon //Selesai (Kurang Upload)
+        -> Hapus Paslon /selesai
+        -> Lihat Paslon //Selesai
+        -> Edit Paslon 
 
 Hasil   -> Vertikal Graph
         -> Verivkasi NIM
 
-Pemilihan -> Veerivikasi Nim -> Tampilkan Hasil -->
+Pemilihan -> Veerivikasi Nim -> Tampilkan Hasil --> 

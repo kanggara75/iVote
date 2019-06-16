@@ -19,7 +19,7 @@ if (isset($_POST['submit']))
                         </h1>
                         <button type="submit" name="submit" class="btn" value="<?= $calon['no']; ?>" style="hidden"
                             onclick="nim()" id="submit">
-                            <img src="<?= BASEURL?><?= $calon['foto']; ?>" alt="KAnggara75" width="200"
+                            <img src="<?= BASEURL?>img/<?= $calon['foto']; ?>" alt="KAnggara75" width="200"
                                 class="rounded-circle shadow" value="<?= $calon['no']; ?>">
                         </button>
                         <h1 align="center">
@@ -35,23 +35,24 @@ if (isset($_POST['submit']))
             </table>
         </form>
     </div>
-
-    <div class="section section-hasil alert alert-warning justify-content-center" role="alert" align="center"
-        id="hasil">
-        <p>Hasil:</p>
-        <!-- <div id="poll_result"></div> -->
-        <table width="95%" border=5 class="justify-content-center">
-            <tr>
+    <!-- Project Card Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h1 class="m-0 font-weight-bold text-primary" align="center">Hasil</h1>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
                 <?php foreach( $data['calon'] as $calon) : ?>
-                <td>
-                    <div class="progress-bar" role="progressbar" style="width: <?= $calon['hasil'] ?>%;"
-                        aria-valuenow="<?= $calon['hasil']; ?>" aria-valuemin="0" aria-valuemax="100">
-                        <?= $calon['hasil']; ?>%</div>
-                </td>
-            </tr>
-            <tr>
+                <li class="list-group-item">
+                    <h4 class="small font-weight-bold"><?= $calon['ketua']; ?> & <?= $calon['wakil']; ?> <span
+                            class="float-right"><?= $calon['hasil']; ?>%</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: <?= $calon['hasil']; ?>%"
+                            aria-valuenow="<?= $calon['hasil']; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </li>
                 <?php endforeach; ?>
-            </tr>
-        </table>
+            </ul>
+        </div>
     </div>
 </div>

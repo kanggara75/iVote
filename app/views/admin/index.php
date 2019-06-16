@@ -77,7 +77,7 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="root" class="btn btn-primary btn-user btn-block">
+                                        <a href="admin/root" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a>
                                     </form>
