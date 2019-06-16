@@ -12,9 +12,8 @@ if (isset($_POST['submit']))
         <form action="" method="POST">
             <input type="radio" name="id" value="<?=$calon['no'];?>" />
             <table align="center" cellpadding="50%" border=0>
-                <tr>
+                <tr><?php foreach( $data['calon'] as $calon) : ?>
                     <td align="center">
-                        <?php foreach( $data['calon'] as $calon) : ?>
                         <h1><?= $calon['no']; ?>
                         </h1>
                         <button type="submit" name="submit" class="btn" value="<?= $calon['no']; ?>" style="hidden"
@@ -28,9 +27,7 @@ if (isset($_POST['submit']))
                             <?= $calon['wakil']; ?>
                         </h1>
                     </td>
-                    <td align="center">
-                        <?php endforeach; ?>
-                    </td>
+                    <?php endforeach; ?>
                 </tr>
             </table>
         </form>
@@ -44,11 +41,9 @@ if (isset($_POST['submit']))
             <ul class="list-group">
                 <?php foreach( $data['calon'] as $calon) : ?>
                 <li class="list-group-item">
-                    <h4 class="small font-weight-bold"><?= $calon['ketua']; ?> & <?= $calon['wakil']; ?> <span
-                            class="float-right"><?= $calon['hasil']; ?>%</span></h4>
+                    <h4 class="small font-weight-bold"><?= $calon['ketua']; ?> & <?= $calon['wakil']; ?> <span class="float-right"><?= $calon['hasil']; ?>%</span></h4>
                     <div class="progress mb-4">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: <?= $calon['hasil']; ?>%"
-                            aria-valuenow="<?= $calon['hasil']; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: <?= $calon['hasil']; ?>%" aria-valuenow="<?= $calon['hasil']; ?>" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </li>
                 <?php endforeach; ?>
