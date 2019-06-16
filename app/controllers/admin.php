@@ -34,7 +34,6 @@ class Admin extends Controller
     {
         $data['judul'] = 'List Pasangan Calon';
         $data['paslon'] = $this->model('Calon_model')->getAllCalon();
-        // $data['pemilih'] = $this->model('Pemilih_model')->getPemilihByNo($no);
         $this->view('admin/paslon', $data);
         $this->view('templates/footer');
     }
@@ -60,11 +59,11 @@ class Admin extends Controller
     public function tambah()
     {
         if ($this->model('Pemilih_model')->tambahDataPemilih($_POST) > 0) {
-            Notifer::setNotif('berhasil', 'ditambahkan', 'success');
+            Notifer::setNotif('berhasil', 'ditambahkan', 'success', 'Pemilih');
             header('Location: ' . BASEURL . 'admin/pemilih');
             exit;
         } else{
-            Notifer::setNotif('gagal', 'ditambahkan', 'danger');
+            Notifer::setNotif('gagal', 'ditambahkan', 'danger', 'Pemilih');
             header('Location: ' . BASEURL . 'admin/pemilih');
             exit;
         }
@@ -73,12 +72,25 @@ class Admin extends Controller
     public function hapus($id)
     {
         if ($this->model('Pemilih_model')->hapusDataPemilih($id) > 0) {
-            Notifer::setNotif('berhasil', 'dihapus', 'success');
+            Notifer::setNotif('berhasil', 'dihapus', 'success', 'Pemilih');
             header('Location: ' . BASEURL . 'admin/pemilih');
             exit;
         } else{
-            Notifer::setNotif('gagal', 'dihapus', 'danger');
+            Notifer::setNotif('gagal', 'dihapus', 'danger', 'Pemilih');
             header('Location: ' . BASEURL . 'admin/pemilih');
+            exit;
+        }
+    }
+
+    public function hapuspaslon($id)
+    {
+        if ($this->model('Calon_model')->hapusDataPaslon($id) > 0) {
+            Notifer::setNotif('berhasil', 'dihapus', 'success', 'paslon');
+            header('Location: ' . BASEURL . 'admin/paslon');
+            exit;
+        } else{
+            Notifer::setNotif('gagal', 'dihapus', 'danger', 'paslon');
+            header('Location: ' . BASEURL . 'admin/paslon');
             exit;
         }
     }

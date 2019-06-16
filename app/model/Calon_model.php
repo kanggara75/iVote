@@ -21,4 +21,15 @@ class Calon_model{
         $this->db->bind('no', $no);
         return $this->db->single();
     }
+
+    public function hapusDataPaslon($id)
+    {
+        $query = "DELETE FROM paslon WHERE no = :id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+        
+        return $this->db->rowCount();
+    }
 }

@@ -44,7 +44,7 @@
     </div>
 
     <div class="container-fluid">
-        <div class="justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-lg-4">
                 <h6 align="center"><?php Notifer::notif();?></h6>
             </div>
@@ -91,7 +91,7 @@
                             </h1>
                         </td>
                         <td>
-                            <a href="<?= BASEURL; ?>admin/hapus/<?= $paslon['no']; ?>"
+                            <a href="<?= BASEURL; ?>admin/hapuspaslon/<?= $paslon['no']; ?>"
                                 class="badge float-right badge-danger ml-1"
                                 onclick="return confirm('Data paslon Akan di hapus?');"><h3>Hapus</h3></a>
                             <a href="<?= BASEURL; ?>admin/paslon"
