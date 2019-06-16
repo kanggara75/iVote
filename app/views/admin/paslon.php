@@ -80,7 +80,7 @@
                             <h1><?= $paslon['no']; ?></h1>
                         </td>
                         <td>
-                            <img src="<?= BASEURL?><?= $paslon['foto']; ?>" alt="KAnggara75" width="200" class=" shadow"value="<?= $paslon['no']; ?>">
+                            <img src="<?= BASEURL?>\img\<?= $paslon['foto']; ?>" alt="KAnggara75" width="200" class=" shadow"value="<?= $paslon['no']; ?>">
                         </td>
                         <td>
                         <h1><?= $paslon['ketua']; ?>
@@ -114,7 +114,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= BASEURL; ?>admin/tambah" method="post">
+                    <form action="<?= BASEURL; ?>admin/tambahpaslon" method="post">
                         <input type="hidden" name="id" id="id">
                         <div class="form-group">
                             <label for="nama">Nama Ketua</label>

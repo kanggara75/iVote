@@ -94,4 +94,18 @@ class Admin extends Controller
             exit;
         }
     }
+
+    public function tambahpaslon()
+    {
+        if ($this->model('Calon_model')->tambahDataPaslon($_POST) > 0) {
+            Notifer::setNotif('berhasil', 'ditambahkan', 'success', 'Pasangan Calon');
+            header('Location: ' . BASEURL . 'admin/paslon');
+            exit;
+        } else{
+            Notifer::setNotif('gagal', 'ditambahkan', 'danger', 'Pasangan Calon');
+            header('Location: ' . BASEURL . 'admin/paslon');
+            exit;
+        }
+    }
+
 }

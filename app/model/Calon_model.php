@@ -22,6 +22,18 @@ class Calon_model{
         return $this->db->single();
     }
 
+    public function tambahDataPaslon($data)
+    {
+        $query = "INSERT INTO paslon VALUE ('', :ketua, :wakil, '', 'foto.jpg')";
+        $this->db->query($query);
+        $this->db->bind('ketua', $data['ketua']);
+        $this->db->bind('wakil', $data['wakil']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
+
     public function hapusDataPaslon($id)
     {
         $query = "DELETE FROM paslon WHERE no = :id";
